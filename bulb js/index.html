@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js miracle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="image">
+                <img id="bulb" src="bulbOff.webp">
+                <button id="toggleBtn" class="btn">TURN On</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let btn = document.getElementById('toggleBtn')
+        let bulb = document.getElementById('bulb')
+        btn.addEventListener('click', toggleBulb)
+        function toggleBulb(e){
+            if(btn.textContent.includes('On')){
+                bulb.src = "bulbOn.webp"
+                btn.textContent = "TURN Off"
+            }else{
+                bulb.src = "bulbOff.webp"
+                btn.textContent = "TURN On"
+            }
+
+        }
+    </script>
+</body>
+</html>
